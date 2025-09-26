@@ -113,10 +113,10 @@ Please make sure your code follows the existing **architecture** and **naming co
 
 ## 👨‍💻 Author  
 
-**Your Name**  
+**Israa Essa**  
 💼 Flutter Developer | 📚 Exploring OOP & Clean Architecture  
-🌐 Portfolio: [yourwebsite.com]  
-💻 GitHub: [yourusername]  
+🌐 Portfolio: [https://www.linkedin.com/in/israa-essa-3b5644384]  
+💻 GitHub: [Israa050]  
 
 ---
 
