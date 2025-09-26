@@ -98,12 +98,6 @@ features/
 
 ---
 
-## 🎨 Figma Design  
-
-📌 [View Figma Design](https://www.figma.com/design/yfU8SiZ263VG5eaDZscomn/Flutter-Task-1?node-id=0-1&p=f&t=vWZcNysWzZFxqicV-0)  
-
----
-
 ## 🤝 Contribution  
 
 Contributions are always welcome! 💡  
