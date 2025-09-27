@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:task_one_figma/core/helper/spacing.dart';
-import 'package:task_one_figma/features/upgrade_plan/presentation/screens/upgrade_plan_page.dart';
+import 'package:task_one_figma/features/upgrade_plan/presentation/screens/anime_upgrade_plan.dart';
 
 class CustomButton extends StatelessWidget {
   Color? color;
@@ -15,7 +15,7 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: (){
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> UpgradePlanPage(),),);
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> AnimeUpgradePlan(),),);
       },
       child: Container(
         height: 44.39.h,

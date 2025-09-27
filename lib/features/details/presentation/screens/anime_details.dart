@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:task_one_figma/core/helper/spacing.dart';
 import 'package:task_one_figma/features/details/presentation/widgets/anime_poster.dart';
-import 'package:task_one_figma/features/details/presentation/widgets/custom_nav.dart';
 import 'package:task_one_figma/features/details/presentation/widgets/description_section.dart';
 import 'package:task_one_figma/features/details/presentation/widgets/genere_container.dart';
 import 'package:task_one_figma/features/details/presentation/widgets/status_section.dart';

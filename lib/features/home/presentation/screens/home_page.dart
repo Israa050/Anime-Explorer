@@ -12,44 +12,42 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: AnimeHome(),
       bottomNavigationBar: Container(
-        child: Container(
-          height: 66,
-          width: double.infinity,
-          decoration: BoxDecoration(color: Colors.transparent),
-          child: Row(
-            mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: [
-              Container(
-                height: 34,
-                width: 98,
-                decoration: BoxDecoration(
-                  color: AppColors.purple,
-                  borderRadius: BorderRadius.circular(50),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    SvgPicture.asset('assets/svgs/home-2.svg'),
-                    Text(
-                      'Home',
-                      style: GoogleFonts.raleway(
-                        textStyle: Theme.of(context).textTheme.displayLarge,
-                        fontSize: 14,
-                        color: Colors.white,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                  ],
-                ),
+        height: 66,
+        width: double.infinity,
+        decoration: BoxDecoration(color: Colors.transparent),
+        child: Row(
+          mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Container(
+              height: 34,
+              width: 98,
+              decoration: BoxDecoration(
+                color: AppColors.purple,
+                borderRadius: BorderRadius.circular(50),
               ),
-
-              SvgPicture.asset('assets/svgs/library.svg'),
-              SvgPicture.asset('assets/svgs/search-normal.svg'),
-              SvgPicture.asset('assets/svgs/network.svg'),
-              SvgPicture.asset('assets/svgs/setting.svg'),
-            ],
-          ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  SvgPicture.asset('assets/svgs/home-2.svg'),
+                  Text(
+                    'Home',
+                    style: GoogleFonts.raleway(
+                      textStyle: Theme.of(context).textTheme.displayLarge,
+                      fontSize: 14,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+      
+            SvgPicture.asset('assets/svgs/library.svg'),
+            SvgPicture.asset('assets/svgs/search-normal.svg'),
+            SvgPicture.asset('assets/svgs/network.svg'),
+            SvgPicture.asset('assets/svgs/setting.svg'),
+          ],
         ),
       ),
     );

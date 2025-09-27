@@ -78,8 +78,6 @@ class AnimeHome extends StatelessWidget {
                       verticalPadding(24),
                   
                       SizedBox(height: 190,child: CharacterList()),
-
-                  
                     ],
                   ),
                 ),
