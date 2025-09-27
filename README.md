@@ -88,7 +88,7 @@ features/
 
 | Home Page | Details Page | Upgrade Plan |
 |-----------|--------------|--------------|
-| ![Home](screenshots/home.png) | ![Details](screenshots/details.png) | ![Upgrade](screenshots/upgrade.png) |
+| ![Home](assets/images/anime_home.png) | ![Details](assets/images/anime_details.png) | ![Upgrade](assets/images/anime_upgrade_plan.png) |
 
 ---
 
