@@ -1,21 +1,3 @@
-<<<<<<< HEAD
-# task_one_figma
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-=======
 # 🌸 Anime Explorer App  
 
 A beautifully designed **Flutter mobile app** to explore your favorite **Animes and Characters** 🎌.  
@@ -148,5 +130,3 @@ Please make sure your code follows the existing **architecture** and **naming co
 
 
 The app is organized **by feature**, making each module independent and reusable.  
-
->>>>>>> 9030966be7fd80341b1a703fda6cdc66cd526739
