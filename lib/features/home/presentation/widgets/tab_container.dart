@@ -8,30 +8,45 @@ class TabContainer extends StatelessWidget {
   String? text;
   double? height;
   double? width;
-  Color? color;
-  Color? textColor;
+  final bool isSelected;
+  final Function() onTap;
 
-  TabContainer({super.key,this.text,this.height,this.width,this.color,this.textColor});
+  TabContainer({super.key,required this.isSelected,required this.onTap,this.text,this.height,this.width});
+
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      constraints: BoxConstraints(minWidth: 60,maxWidth: 100),
-      //width: width ?? 45,
-      height: height?? 30,
-      decoration: BoxDecoration(
-        color: color?? AppColors.purple,
-        borderRadius: BorderRadius.circular(50),  
-      ),
-      child: Center(
-        child: Text(
-          text ??'All',
-          style: GoogleFonts.raleway(
-             textStyle: Theme.of(context).textTheme.displayLarge,
-             fontSize: 14,
-             color:textColor
-             ?? Colors.white,
-             fontWeight: FontWeight.bold
+    return Material(
+      color: Colors.transparent,
+      borderRadius: BorderRadius.circular(50),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(50),
+        onTap:onTap,
+       splashColor: Colors.white.withValues(alpha:  0.2),
+        child: AnimatedContainer(
+          duration: Duration(seconds: 3),
+          curve:Curves.easeIn,
+          child: Ink(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            height: height?? 30,
+            decoration: BoxDecoration(
+              color: isSelected? AppColors.purple : Colors.white,
+              borderRadius: BorderRadius.circular(50),  
+            ),
+            child: Center(
+              child: AnimatedDefaultTextStyle(
+                  duration: const Duration(milliseconds: 500),
+                curve: Curves.easeIn,
+                style: GoogleFonts.raleway(
+                  fontSize: 14,
+                  fontWeight: FontWeight.bold,
+                  color: isSelected ? Colors.white : AppColors.purple,
+                ),
+                child: Text(
+                  text ??'All',
+                ),
+              ),
+            ),
           ),
         ),
       ),

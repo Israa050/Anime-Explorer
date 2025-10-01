@@ -4,8 +4,16 @@ import 'package:task_one_figma/core/themes/colors/app_colors.dart';
 import 'package:task_one_figma/features/details/presentation/screens/details_page.dart';
 import 'package:task_one_figma/features/home/presentation/widgets/tab_container.dart';
 
-class TabsList extends StatelessWidget {
+class TabsList extends StatefulWidget {
 
+
+  TabsList({super.key});
+
+  @override
+  State<TabsList> createState() => _TabsListState();
+}
+
+class _TabsListState extends State<TabsList> {
   List<String> tabs =[
      'All',
      'Popular',
@@ -15,8 +23,7 @@ class TabsList extends StatelessWidget {
      'Upcoming',
   ];
 
-
-  TabsList({super.key});
+  int selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -25,16 +32,15 @@ class TabsList extends StatelessWidget {
       itemCount: tabs.length,
     itemBuilder: (context,index){
       return Padding(
-        padding: const EdgeInsets.only(right: 4,),
-        child: InkWell(
-          onTap: (){
-            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> DetailsPage(),),);
-          },
-          child: TabContainer(
-            color: index==0? AppColors.purple: Colors.white,
-            text: tabs[index],
-            textColor: index==0? Colors.white: AppColors.purple,
-          ),
+        padding: const EdgeInsets.only(right: 5,),
+        child: TabContainer(
+          isSelected: selectedIndex == index,
+          text: tabs[index],
+          onTap: () {
+            setState(() {
+              selectedIndex = index;
+            });
+          },        
         ),
       );
     },);
