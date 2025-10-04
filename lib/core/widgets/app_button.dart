@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:task_one_figma/core/themes/colors/app_colors.dart';
+import '../themes/colors/app_colors.dart';
+import '../themes/styles/styles.dart';
 
 class AppButton extends StatelessWidget {
   const AppButton({super.key});
@@ -19,12 +20,7 @@ class AppButton extends StatelessWidget {
         child: Text(
           'Continue',
           textAlign: TextAlign.start,
-          style: GoogleFonts.raleway(
-            textStyle: Theme.of(context).textTheme.bodySmall,
-            fontSize: 16,
-            color: Colors.white,
-            fontWeight: FontWeight.w700,
-          ),
+          style: TextStyles.font16WhiteBold,
         ),
       ),
     );

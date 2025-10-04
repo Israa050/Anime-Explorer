@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:task_one_figma/core/helper/spacing.dart';
+
+import '../../../../core/helper/spacing.dart';
+import '../../../../core/themes/styles/styles.dart';
 
 class StatusSection extends StatelessWidget {
   const StatusSection({super.key});
@@ -17,10 +18,7 @@ class StatusSection extends StatelessWidget {
             horizontalPadding(7),
             Text(
               ' 2.3M view',
-              style: GoogleFonts.raleway(
-                textStyle: Theme.of(context).textTheme.bodySmall,
-                color: Colors.white,
-              ),
+              style: TextStyles.font14WhiteRegular
             ),
           ],
         ),
@@ -31,10 +29,7 @@ class StatusSection extends StatelessWidget {
             horizontalPadding(7),
             Text(
               ' 2K clap',
-              style: GoogleFonts.raleway(
-                textStyle: Theme.of(context).textTheme.bodySmall,
-                color: Colors.white,
-              ),
+              style: TextStyles.font14WhiteRegular
             ),
           ],
         ),
@@ -45,10 +40,7 @@ class StatusSection extends StatelessWidget {
             horizontalPadding(7),
             Text(
               ' 4 Seasons',
-              style: GoogleFonts.raleway(
-                textStyle: Theme.of(context).textTheme.bodySmall,
-                color: Colors.white,
-              ),
+               style: TextStyles.font14WhiteRegular
             ),
           ],
         ),

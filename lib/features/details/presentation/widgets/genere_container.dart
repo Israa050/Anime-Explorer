@@ -1,8 +1,8 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import '../../../../core/themes/styles/styles.dart';
 
 class GenereContainer extends StatelessWidget {
   String? text;
@@ -29,7 +29,7 @@ class GenereContainer extends StatelessWidget {
         child: Text(
           text?? 'Mystery',
           style: GoogleFonts.raleway(
-            textStyle: Theme.of(context).textTheme.bodySmall,
+            textStyle: TextStyles.font13WhiteMedium,
             color: Colors.white,
           ),
         ),

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../../../../core/themes/styles/styles.dart';
 
 class DescriptionSection extends StatelessWidget {
 
@@ -12,6 +13,7 @@ class DescriptionSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceAround,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
 
         SvgPicture.asset('assets/svgs/fire.svg'),
@@ -21,12 +23,7 @@ class DescriptionSection extends StatelessWidget {
            child: Text(
             maxLines: 8,
              description,
-            style: GoogleFonts.raleway(
-              textStyle: Theme.of(context).textTheme.bodySmall,
-              color: Colors.white,
-              fontSize: 14,
-              fontWeight: FontWeight.w500,
-            ),
+            style: TextStyles.font14WhiteMedium
            ),
          ),
 

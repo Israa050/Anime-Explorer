@@ -1,7 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:task_one_figma/core/themes/colors/app_colors.dart';
+import '../../../../core/themes/colors/app_colors.dart';
+import '../../../../core/themes/styles/styles.dart';
 
 class TabContainer extends StatelessWidget {
 
@@ -37,11 +38,7 @@ class TabContainer extends StatelessWidget {
               child: AnimatedDefaultTextStyle(
                   duration: const Duration(milliseconds: 500),
                 curve: Curves.easeIn,
-                style: GoogleFonts.raleway(
-                  fontSize: 14,
-                  fontWeight: FontWeight.bold,
-                  color: isSelected ? Colors.white : AppColors.purple,
-                ),
+                style:isSelected? TextStyles.font14WhiteBold: TextStyles.font14WhiteBold.copyWith(color: AppColors.purple,),
                 child: Text(
                   text ??'All',
                 ),

@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
-import 'package:task_one_figma/features/home/data/models/character.dart';
-import 'package:task_one_figma/features/home/presentation/widgets/character_avatar.dart';
+import '../../data/models/character.dart';
+import 'character_avatar.dart';
 
 class CharacterList extends StatelessWidget {
   List<Character> characters =[
@@ -21,7 +21,7 @@ class CharacterList extends StatelessWidget {
       itemCount: characters.length,
       itemBuilder: (context,index){
       return Padding(
-        padding: const EdgeInsets.only(left: 20,),
+        padding: const EdgeInsets.only(left: 20,right: 1),
         child: CharacterAvatar(character: characters[index],),
       );
     });

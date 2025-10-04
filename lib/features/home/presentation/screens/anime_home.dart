@@ -2,13 +2,13 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:task_one_figma/core/helper/spacing.dart';
-import 'package:task_one_figma/core/themes/colors/app_colors.dart';
-import 'package:task_one_figma/features/home/presentation/widgets/anime_list.dart';
-import 'package:task_one_figma/features/home/presentation/widgets/character_list.dart';
-import 'package:task_one_figma/features/home/presentation/widgets/header.dart';
-import 'package:task_one_figma/features/home/presentation/widgets/tabs_list.dart';
+import '../../../../core/helper/spacing.dart';
+import '../../../../core/themes/colors/app_colors.dart';
+import '../../../../core/themes/styles/styles.dart';
+import '../widgets/anime_list.dart';
+import '../widgets/character_list.dart';
+import '../widgets/header.dart';
+import '../widgets/tabs_list.dart';
 
 class AnimeHome extends StatelessWidget {
   const AnimeHome({super.key});
@@ -67,12 +67,7 @@ class AnimeHome extends StatelessWidget {
                   
                       Text(
                         'Top Characters',
-                        style: GoogleFonts.raleway(
-                          textStyle: Theme.of(context).textTheme.displayLarge,
-                          fontSize: 24,
-                          color: AppColors.darkPurple,
-                          fontWeight: FontWeight.bold,
-                        ),
+                        style: TextStyles.font24DarkPurpuleBold.copyWith(color: Colors.black,),
                       ),
                   
                       verticalPadding(24),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import '../../../../core/themes/styles/styles.dart';
 
 class RatingTab extends StatelessWidget {
   const RatingTab({super.key});
@@ -28,11 +29,7 @@ class RatingTab extends StatelessWidget {
               child: Text(
                 '5.0',
                 textAlign: TextAlign.center,
-                style: TextStyle(
-                  fontSize: 12,
-                  color: Colors.black,
-                  fontWeight: FontWeight.w600,
-                ),
+                style: TextStyles.font12BlackSemiBold
               ),
             ),
 

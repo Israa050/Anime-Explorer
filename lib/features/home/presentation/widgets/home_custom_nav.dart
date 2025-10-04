@@ -1,61 +1,73 @@
 
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:task_one_figma/core/themes/colors/app_colors.dart';
+import 'bottom_nav_item.dart';
 
-class HomeCustomNav extends StatefulWidget {
-  const HomeCustomNav({super.key});
+class HomeCustomBottomNavBar extends StatelessWidget {
+  final int currentIndex;
+  final Function(int) onTap;
 
-  @override
-  State<HomeCustomNav> createState() => _HomeCustomNavState();
-}
+  const HomeCustomBottomNavBar({
+    super.key,
+    required this.currentIndex,
+    required this.onTap,
+  });
 
-class _HomeCustomNavState extends State<HomeCustomNav> {
-
-  int selectedIndex = 0;
-
-  
   @override
   Widget build(BuildContext context) {
-    return  Container(
-        height: 66,
-        width: double.infinity,
-        decoration: BoxDecoration(color: Colors.transparent),
-        child: Row(
-          mainAxisSize: MainAxisSize.max,
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            Container(
-              height: 34,
-              width: 98,
-              decoration: BoxDecoration(
-                color: AppColors.purple,
-                borderRadius: BorderRadius.circular(50),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  SvgPicture.asset('assets/svgs/home-2.svg'),
-                  Text(
-                    'Home',
-                    style: GoogleFonts.raleway(
-                      textStyle: Theme.of(context).textTheme.displayLarge,
-                      fontSize: 14,
-                      color: Colors.white,
-                      fontWeight: FontWeight.w600,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-      
-            SvgPicture.asset('assets/svgs/library.svg'),
-            SvgPicture.asset('assets/svgs/search-normal.svg'),
-            SvgPicture.asset('assets/svgs/network.svg'),
-            SvgPicture.asset('assets/svgs/setting.svg'),
-          ],
-        ),
-      );
+    double screenWidth = MediaQuery.of(context).size.width;
+
+    return Container(
+      padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 12),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withValues(alpha: 0.05),
+            blurRadius: 8,
+            offset: const Offset(0, -2),
+          ),
+        ],
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          NavItem(
+            iconPath: 'assets/svgs/home-2.svg',
+            label: "Home",
+            isSelected: currentIndex == 0,
+            onTap: () => onTap(0),
+            screenWidth: screenWidth,
+          ),
+          NavItem(
+            iconPath: 'assets/svgs/library.svg',
+            label: "Library",
+            isSelected: currentIndex == 1,
+            onTap: () => onTap(1),
+            screenWidth: screenWidth,
+          ),
+          NavItem(
+            iconPath: 'assets/svgs/search-normal.svg',
+            label: "Search",
+            isSelected: currentIndex == 2,
+            onTap: () => onTap(2),
+            screenWidth: screenWidth,
+          ),
+          NavItem(
+            iconPath: 'assets/svgs/network.svg',
+            label: "Explore",
+            isSelected: currentIndex == 3,
+            onTap: () => onTap(3),
+            screenWidth: screenWidth,
+          ),
+          NavItem(
+            iconPath: 'assets/svgs/setting.svg',
+            label: "Settings",
+            isSelected: currentIndex == 4,
+            onTap: () => onTap(4),
+            screenWidth: screenWidth,
+          ),
+        ],
+      ),
+    );
   }
 }

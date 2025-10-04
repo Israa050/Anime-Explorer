@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:task_one_figma/core/helper/spacing.dart';
-import 'package:task_one_figma/core/themes/colors/app_colors.dart';
-import 'package:task_one_figma/features/home/data/models/anime.dart';
-import 'package:task_one_figma/features/home/presentation/widgets/rating_tab.dart';
+import '../../../../core/helper/spacing.dart';
+import '../../../../core/themes/styles/styles.dart';
+import '../../data/models/anime.dart';
+import 'rating_tab.dart';
 
 class AnimeCard extends StatelessWidget {
   Anime anime;
@@ -38,12 +38,7 @@ class AnimeCard extends StatelessWidget {
 
         Text(
           anime.title?? 'Detective Conan',
-          style: GoogleFonts.raleway(
-            textStyle: Theme.of(context).textTheme.displayLarge,
-            fontSize: 14,
-            color: AppColors.darkPurple,
-            fontWeight: FontWeight.w700,
-          ),
+          style: TextStyles.font14DarkPurpleBold,
         ),
 
         verticalPadding(4),
@@ -51,10 +46,7 @@ class AnimeCard extends StatelessWidget {
         Text(
           anime.genere ?? 'Mystery',
           style: GoogleFonts.raleway(
-            textStyle: Theme.of(context).textTheme.displaySmall,
-            fontSize: 14,
-            color: Color(0xffA9A9A9),
-            fontWeight: FontWeight.w500,
+            textStyle: TextStyles.font12GreyMedium,
           ),
         ),
       ],

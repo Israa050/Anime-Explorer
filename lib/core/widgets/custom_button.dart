@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:task_one_figma/core/helper/spacing.dart';
-import 'package:task_one_figma/features/upgrade_plan/presentation/screens/anime_upgrade_plan.dart';
+import 'package:task_one_figma/features/upgrade_plan/presentation/screens/upgrade_plan_page.dart';
+import '../helper/spacing.dart';
+import '../themes/styles/styles.dart';
 
 class CustomButton extends StatelessWidget {
   Color? color;
@@ -15,7 +15,7 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: (){
-      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> AnimeUpgradePlan(),),);
+      Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context)=> UpgradePlanScreen(),),);
       },
       child: Container(
         height: 44.39.h,
@@ -31,18 +31,14 @@ class CustomButton extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+              horizontalPadding(10),
               SvgPicture.asset(imagePath?? 'assets/svgs/solar_stopwatch-play-bold.svg'),
           
               horizontalPadding(15),
                 
                Text(
                 text?? 'preview',
-                style: GoogleFonts.raleway(
-                  textStyle: Theme.of(context).textTheme.bodySmall,
-                  color: Colors.white,
-                  fontSize: 15,
-                  fontWeight: FontWeight.w600,
-                ),
+                style: TextStyles.font14WhiteBold 
                ),
                 
             ],

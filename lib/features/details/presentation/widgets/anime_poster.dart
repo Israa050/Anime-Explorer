@@ -15,7 +15,7 @@ class AnimePoster extends StatelessWidget {
               child: Column(
               children: [
               SizedBox(
-                height: 519.sp,
+                height: MediaQuery.of(context).size.height*0.75,
                 width: double.infinity,
                 child: Image.asset('assets/images/demon_slayer.png',fit: BoxFit.cover,),
               ),

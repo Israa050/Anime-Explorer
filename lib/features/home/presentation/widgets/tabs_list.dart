@@ -1,8 +1,7 @@
 
 import 'package:flutter/material.dart';
-import 'package:task_one_figma/core/themes/colors/app_colors.dart';
 import 'package:task_one_figma/features/details/presentation/screens/details_page.dart';
-import 'package:task_one_figma/features/home/presentation/widgets/tab_container.dart';
+import 'tab_container.dart';
 
 class TabsList extends StatefulWidget {
 

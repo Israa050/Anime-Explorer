@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:task_one_figma/core/helper/spacing.dart';
-import 'package:task_one_figma/features/details/presentation/widgets/anime_poster.dart';
-import 'package:task_one_figma/features/details/presentation/widgets/description_section.dart';
-import 'package:task_one_figma/features/details/presentation/widgets/genere_container.dart';
-import 'package:task_one_figma/features/details/presentation/widgets/status_section.dart';
+import '../../../../core/helper/spacing.dart';
+import '../widgets/anime_poster.dart';
+import '../widgets/description_section.dart';
+import '../widgets/genere_container.dart';
+import '../widgets/status_section.dart';
 
 class AnimeDetails extends StatelessWidget {
   const AnimeDetails({super.key});

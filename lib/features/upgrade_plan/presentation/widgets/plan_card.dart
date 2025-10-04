@@ -1,8 +1,8 @@
 import "package:flutter/material.dart";
 import "package:flutter_screenutil/flutter_screenutil.dart";
-import "package:task_one_figma/core/helper/spacing.dart";
-import "package:task_one_figma/core/themes/colors/app_colors.dart";
-import "package:task_one_figma/features/upgrade_plan/presentation/widgets/plan_details.dart";
+import "../../../../core/helper/spacing.dart";
+import "../../../../core/themes/colors/app_colors.dart";
+import "plan_details.dart";
 
 class PlanCard extends StatefulWidget {
 
