@@ -1,3 +1,4 @@
 {
-    "cmake.sourceDirectory": "C:/flutterapps/task_one_figma/linux"
+    "cmake.sourceDirectory": "C:/flutterapps/task_one_figma/linux",
+    "java.configuration.updateBuildConfiguration": "interactive"
 }
